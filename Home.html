@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+body{
+	background: rgb(50, 50, 50);
+}
+.menuBar {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	background: rgba(35, 35, 35, .4);
+	height: 100%;
+	width: 140px;
+}
+.item:hover{
+	color: black;
+	background: rgba(255, 255, 255, .4);
+	border-left: 5px solid black;
+}
+a:hover, a:visited, a:link, a:active {
+	text-decoration: none;
+}
+.item {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	text-decoration: none;
+	color: white;
+	transition:.5s;
+	position: relative;
+	text-align: right;
+	top: 10px;
+	font-family: helvetica;
+	padding: 10px 10px 10px 0;
+	border-left: 5px solid white;
+}
+</style>
+</head>
+<body>
+<div class="menuBar">
+<a href="me"><div class="item">Leandro Ribeiro</div></a>
+<a href="prjct"><div class="item">Projects</div></a>
+<a href="cntct"><div class="item">Contact Me</div></a>
+</div>
+<script>
+</script>
+</body>
