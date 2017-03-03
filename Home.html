@@ -2,12 +2,34 @@
 
 <head>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Lato|Rubik" rel="stylesheet">
 <style>
 body{
 	background: rgb(50, 50, 50);
 	text-shadow: 0 1px 3px rgba(0,0,0,.2);
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+p{
+	text-align:center;
+	color:white;
+}
+.dscrptn{
+	width: 60%;
+	margin: 0 auto;
+	font-size: 36px;
+}
+.me{
+	display: block;
+	margin: 150px auto 0px auto;
+	border: 7px solid white;
+	width: 304px;
+	height: 304px;
+	border-radius: 50%;
 }
 .menuBar {
+	font-family: 'Rubik', sans-serif;
+	font-weight: bold;
 	position: fixed;
 	left: 0px;
 	top: 0px;
@@ -28,13 +50,11 @@ a:hover, a:visited, a:link, a:active {
 	-ms-transition:.5s;
 	-moz-transition:.5s;
 	-webkit-transition:.5s;
-	text-decoration: none;
 	color: white;
 	transition:.5s;
 	position: relative;
 	text-align: right;
 	top: 10px;
-	font-family: helvetica;
 	padding: 10px 10px 10px 0;
 	border-left: 5px solid white;
 }
@@ -42,9 +62,16 @@ a:hover, a:visited, a:link, a:active {
 </head>
 <body>
 <div class="menuBar">
-<a href="me"><div class="item">Leandro Ribeiro</div></a>
-<a href="prjct"><div class="item">Projects</div></a>
-<a href="cntct"><div class="item">Contact Me</div></a>
+	<a href="#me"><div class="item">Leandro Ribeiro</div></a>
+	<!--<a href="#prjct"><div class="item">Projects</div></a> -->
+	<a href="#cntct"><div class="item">Contact Me</div></a>
+</div>
+<div class="dscrptn">
+	<img class="me" src="yoursTruly.jpg"></img>
+	<p>I am a student at Binghamton University currently pursuing a Bachelor of Science in Computer Science and a Bachelor of Arts in Mathematics.<br> See my <a href="resume.pdf" style="font-weight:bold;color:white;text-decoration:underline;">resumé here</a></p>
+</div>
+
+<div class="contactMe">
 </div>
 <script>
 </script>
