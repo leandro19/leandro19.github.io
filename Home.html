@@ -21,6 +21,20 @@ hr{
 	max-height: 10px;
     max-width: 180px;
 }
+label{
+	display:block;
+	text-align:left;
+	margin-left:-10%;
+    font-weight: 700;
+	font: normal 24px 'Rubik' !important;
+
+}
+input{
+	
+}
+.name{
+	display:inline-block;
+}
 .menuBar {
 	font-family: 'Rubik', sans-serif;
 	font-weight: bold;
@@ -69,9 +83,29 @@ a:hover, a:visited, a:link, a:active {
 	margin: 300px auto 300px auto;
 	text-align: center;
 }
+.send{
+	background:blue;
+	margin: 0 auto;
+	width: 700px;
+}
+input{
+	border-radius: 10px;
+	height:30px;
+	
+}
+.first{
+	float:left;
+	margin-left:-10%;
+}
+.last{
+	float:right;
+	margin-right:-10%;
+}
 input::-webkit-input-placeholder {
+	font-size: 18px;
 }
 input:-moz-placeholder {
+	font-size: 18px;
 }
 </style>
 </head>
@@ -89,8 +123,14 @@ input:-moz-placeholder {
 
 <div class="cntct">
 	<h1>Contact Me</h1>
-	<hr size="7">
-	<input type="name" placeholder="First name">
+	<hr size="7" style="margin-top: -10px;">
+	<div class="send">
+		<div class="name">
+			<label>First name</label>
+			<input type="text" class="first" placeholder="First name" size="35">
+			<input type="text" class="last" placeholder="Last name" size="35">
+		</div>
+	</div>
 </div>
 
 <script>
