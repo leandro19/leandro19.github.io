@@ -24,13 +24,10 @@ hr{
 label{
 	display:block;
 	text-align:left;
-	margin-left:-10%;
     font-weight: 700;
+	margin-top:10px;
 	font: normal 24px 'Rubik' !important;
 
-}
-input{
-	
 }
 .name{
 	display:inline-block;
@@ -84,22 +81,30 @@ a:hover, a:visited, a:link, a:active {
 	text-align: center;
 }
 .send{
-	background:blue;
+	//background:blue;
 	margin: 0 auto;
-	width: 700px;
+	width: 1000px;
 }
 input{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
 	border-radius: 10px;
 	height:30px;
-	
+	font-size:18px;
+}
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px skyblue;
 }
 .first{
 	float:left;
-	margin-left:-10%;
+	margin-left:-2.5%;
 }
 .last{
 	float:right;
-	margin-right:-10%;
+	margin-right:-2.5%;
 }
 input::-webkit-input-placeholder {
 	font-size: 18px;
