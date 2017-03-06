@@ -46,6 +46,45 @@ label{
 	height: 100%;
 	width: 140px;
 }
+.links{
+	right:5px;
+	top:5px;
+	position: fixed;
+}
+.octoCat{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	display:inline-block;
+	background-image: url('GitHub-Mark-Light-64px.png');
+	height:64px;
+	width:64px;
+	margin-right:5px;
+}
+.octoCat:hover{
+	background-image: url('GitHub-Mark-64px.png');
+	border-radius:50px;
+	box-shadow: 0 0 5px white;
+}
+.linkedIn{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	display:inline-block;
+	background-image: url('linkedin-3-512.png');
+	background-size: 64px 64px;
+	height:64px;
+	width:64px;
+	margin-right:5px;
+}
+.linkedIn:hover{
+	background-image: url('linkedin-3-512-Dark.png');
+	background-size: 64px 64px;
+	border-radius:10px;
+	box-shadow: 0 0 5px white;
+}
 .item:hover{
 	color: black;
 	background: rgba(255, 255, 255, .4);
@@ -141,6 +180,10 @@ textarea:-moz-placeholder {
 	height:90px;
 }
 .sendOff{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
 	margin-top:15px;
 	float:left;
 	border-style:none;
@@ -150,9 +193,17 @@ textarea:-moz-placeholder {
 	font-family: 'Rubik', sans-serif;
 	font-weight:bold;
 }
+input[type=button]:hover{
+	box-shadow: 0 0 5px white;
+	background-color: black;
+}
 </style>
 </head>
 <body>
+<div class="links">
+	<a href="https://github.com/leandro19"><div class="octoCat"></div></a>
+	<a href="https://www.linkedin.com/in/leandro-ribeiro/"><div class="linkedIn"></div></a>
+</div>
 <div class="menuBar">
 	<a href="#me"><div class="item">Leandro Ribeiro</div></a>
 	<!--<a href="#prjct"><div class="item">Projects</div></a> -->
@@ -173,8 +224,8 @@ textarea:-moz-placeholder {
 	<div class="send">
 		<div class="sbmssns">
 			<label>First name</label>
-			<input type="text" class="first" placeholder="First name" size="34">
-			<input type="text" class="last" placeholder="Last name" size="34">
+			<input type="text" class="first" name="first" placeholder="First name" size="34">
+			<input type="text" class="last" name="last" placeholder="Last name" size="34">
 		</div>
 		<div class="sbmssns">
 			<label>Email</label>
@@ -183,7 +234,7 @@ textarea:-moz-placeholder {
 		<div class="sbmssns">
 			<label>Message</label>
 			<textarea rows="5" cols="74" class="message" placeholder="Message" form="usrform"></textarea>
-			<input class="sendOff" type="submit" vlaue="Submit">
+			<input class="sendOff" type="button" value="Submit">
 		</div>
 	</div>
 	</form>
