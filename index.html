@@ -296,7 +296,7 @@ input[type=button]:hover{
 
 <div class="cntct">
 	<a name="cntct"></a>
-	<form method="post" name="contactMe" action:"sendEmail.php">
+	<form method="post" name="contactMe" action:"sendEmail.py">
 	<h1>Contact Me</h1>
 	<hr size="7" style="margin-top: -10px;">
 	<div class="send">
@@ -307,11 +307,11 @@ input[type=button]:hover{
 		</div>
 		<div class="sbmssns">
 			<label>Email</label>
-			<input type="text" class="address" placeholder="Email Address" size="76">
+			<input type="text" class="address" name="email" placeholder="Email Address" size="76">
 		</div>
 		<div class="sbmssns">
 			<label>Message</label>
-			<textarea rows="5" cols="76" class="message" placeholder="Message" form="usrform"></textarea>
+			<textarea rows="5" cols="76" class="message" name="message" placeholder="Message" form="usrform"></textarea>
 			<input class="sendOff" type="button" value="Submit">
 		</div>
 	</div>
