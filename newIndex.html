@@ -15,46 +15,173 @@
 
 </head>
 <body>
-	<div class="ui inverted menu">
-		<a class="blue active item">
+	<a id="top">&#160;</a>
+	<div class="ui fixed inverted menu">
+		<a class="blue item" href="#top">
 			Leandro Ribeiro
 		</a>
-		<a class="yellow item">
+		<a class="yellow item" href="#projects">
 			Projects
 		</a>
 		<div class="right menu">
-			<a class="ui right floating icon item">
+			<a class="ui right floating icon item" href="https://github.com/leandro19">
 				<i class="big inverted github square icon"></i>
 			</a>
-			<a class="ui right floating icon item">
+			<a class="ui right floating icon item" href="https://www.linkedin.com/in/leandro-ribeiro/">
 				<i class="big inverted linkedin square icon"></i>
 			</a>
 		</div>
 	</div>
-	<div class="ui container">
-		<img class="ui centered medium circular image" src="yoursTruly.jpg"></img>
-		<div class="ui divider"></div>
-		<h1 class="ui centered inverted header">I am currently pursuing a B.S. in Computer Science and a B.A. in Mathematics at Binghamton University.<br> See my <a href="resume.pdf" style="font-weight:bold;color:white;text-decoration:underline;">resumé</a> here.</h1>
-	</div>
-	<!--
-<div class="ui pointing menu">
-	<a class="item">
-		Leandro Ribeiro
-	</a>
-	<a class="item">
-		Projects
-	</a>
-	<a class="item active">
-		Contact Me
-	</a>
-	<div class="right menu">
-		<div class="item">
+		<div style="margin-top: 50px;"></div>
+	<div class="ui vertical masthead center very padded aligned segment">
+		<div class="ui container">
+			<img class="ui centered medium circular image" src="yoursTruly.jpg"></img>
+			<div class="ui divider"></div>
+			<h1 class="ui centered inverted header">I am currently pursuing a B.S. in Computer Science and a B.A. in Mathematics at Binghamton University.<br> See my <a href="resume.pdf" style="font-weight:bold;color:white;text-decoration:underline;">resumé</a> here.</h1>
 		</div>
 	</div>
-</div>
-<div class="dscrptn">
-	<img class="me" src="yoursTruly.jpg"></img>
-	<hr size="7">
-	<p>I am currently pursuing a B.S. in Computer Science and a B.A. in Mathematics at Binghamton University.<br> See my <a href="resume.pdf" style="font-weight:bold;color:white;text-decoration:underline;">resumé</a> here.</p>
-	-->
+
+
+	<div class="ui vertical very padded segment" id="projects">
+	<div class="ui divider"></div>
+		<h1 class="ui huge centered inverted header">Projects</h1>
+		<div style="margin-top: 50px;"></div>
+
+		<div class="ui container">
+			<div class="ui centered two column grid">
+				<div class="column">
+					<div class="ui centered dark special card">
+						<div class="blurring dimmable image">
+							<div class="ui dimmer">
+								<div class="content">
+									<div class="center">
+										Kings Cup party game using Python. Tkinter and Random modules used for cards and GUI.
+									</div>
+								</div>
+							</div>
+							<img src="kings.png">
+						</div>
+						<div class="content">
+							<div class="ui blue inverted header">Python Game</div>
+								<div class="meta">
+									<p>November, 2015</p>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="ui centered dark special card">
+						<div class="blurring dimmable image">
+							<div class="ui dimmer">
+								<div class="content">
+									<div class="center">
+										First web development project. Users have a pet critter and must maintain its health, energy, and happiness.
+									</div>
+								</div>
+							</div>
+							<img src="smolCritter.png">
+						</div>
+						<div class="content">
+							<a class="ui blue inverted header" href="http://smolcritter.com">Smolcritter.com</a>
+								<div class="meta">
+									<p>September, 2016</p>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="row"></div>
+				<div class="column">
+					<div class="ui centered dark special card">
+						<div class="blurring dimmable image">
+							<div class="ui dimmer">
+								<div class="content">
+									<div class="center">
+										Assembly simulator that interprets its own files and displays what the content looks like in simulated memory.
+									</div>
+								</div>
+							</div>
+							<img src="GUI3.jpg">
+						</div>
+						<div class="content">
+							<div class="ui blue inverted header">Pippin Assembler</div>
+								<div class="meta">
+									<p>December, 2016</p>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="ui centered dark special card">
+						<div class="blurring dimmable image">
+							<div class="ui dimmer">
+								<div class="content">
+									<div class="center">
+										Website built using Semantic UI for effects and details.
+									</div>
+								</div>
+							</div>
+							<img src="website.png">
+						</div>
+						<div class="content">
+							<div class="ui blue inverted header">Personal Website</div>
+								<div class="meta">
+									<p>March, 2017</p>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 </body>
+
+
+<script>
+$('.special.card .image').dimmer({
+	  on: 'hover'
+});
+
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+menu = {};
+
+// ready event
+menu.ready = function() {
+
+	  // selector cache
+	  var
+	    $menuItem = $('.menu a.item, .menu .link.item'),
+		    // alias
+		handler = {
+			activate: function() {
+				        $(this)
+				        .addClass('active')
+				        .closest('.ui.menu')
+				        .find('.item')
+				        .not($(this))
+				        .removeClass('active');
+				      
+			}
+			    
+		}
+	  ;
+
+	  $menuItem
+	    .on('click', handler.activate)
+}
+
+// attach ready event
+$(document).ready(menu.ready);
+</script>
